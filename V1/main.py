@@ -32,9 +32,8 @@ def perform_clicks():
             # Increment and print the click counter
             click_count += 1
             mouse.click(Button.left, 1)
-            # print(f"Click performed: {click_count}")  # Print click count
             print(click_count)  # Print click count
-            
+
             # Wait for the specified interval
             for _ in range(INTERVAL):
                 if not running:  # Check for exit signal
@@ -49,12 +48,12 @@ def perform_clicks():
 while True:
     running = True  # Reset the running flag
     print("Starting the program... Press Esc 3 times to exit.")
-    
+
     # Start the keyboard listener
     with Listener(on_press=on_press) as listener:
         perform_clicks()  # Start the click loop
         listener.join()  # Ensure listener stops properly
-    
+
     if not running:  # Break the loop if Esc was pressed 3 times
         print("Program terminated by user.")
         break

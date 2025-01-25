@@ -1,3 +1,5 @@
+README.md:
+
 # ClickHelper
 
 **ClickHelper** is a Python-based utility tool designed to automate repetitive mouse-clicking tasks with user-defined intervals. It is ideal for situations where automated, periodic mouse clicks are needed, and it provides an easy way to manage and control the process.
@@ -29,7 +31,7 @@
    ```
 3. Run the program:
    ```bash
-   python clickhelper.py
+   python main.py
    ```
 
 ### For Non-Python Users
@@ -53,8 +55,7 @@
 ```
 ClickHelper/
 ├── V1/
-│   ├── clickhelper.py    # Python script for the first version
-│   ├── clickhelper.exe   # Executable file for the first version
+│   ├── main.py           # Python script for the first version
 ├── V2/                   # Placeholder for future updates
 ├── README.md             # Project documentation
 └── LICENSE               # License file
@@ -97,4 +98,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Disclaimer
 
 This tool is provided "as is" without warranty of any kind. Use it responsibly and ensure it complies with the intended use cases and policies.
-

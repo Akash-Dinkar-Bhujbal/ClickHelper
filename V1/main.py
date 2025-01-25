@@ -5,9 +5,6 @@ import time
 # Initialize the mouse controller
 mouse = Controller()
 
-# Define the interval (in seconds)
-INTERVAL = 90  # Change this to 30, 60, or any other value
-
 # Global variables
 running = True  # Flag to control the program
 esc_press_count = 0  # Counter for Esc key presses
@@ -25,7 +22,7 @@ def on_press(key):
             return False  # Stop the listener
 
 # Function to perform clicks with periodic checks
-def perform_clicks():
+def perform_clicks(interval):
     global running, click_count
     try:
         while running:
@@ -35,7 +32,7 @@ def perform_clicks():
             print(click_count)  # Print click count
 
             # Wait for the specified interval
-            for _ in range(INTERVAL):
+            for _ in range(interval):
                 if not running:  # Check for exit signal
                     return
                 time.sleep(1)
@@ -48,10 +45,21 @@ def perform_clicks():
 while True:
     running = True  # Reset the running flag
     print("Starting the program... Press Esc 3 times to exit.")
-
+    
+    # Get the time interval from the user
+    while True:
+        try:
+            interval = int(input("Enter the time interval (in seconds) between clicks: "))
+            if interval > 0:
+                break
+            else:
+                print("Please enter a positive integer.")
+        except ValueError:
+            print("Invalid input. Please enter a valid integer.")
+    
     # Start the keyboard listener
     with Listener(on_press=on_press) as listener:
-        perform_clicks()  # Start the click loop
+        perform_clicks(interval)  # Start the click loop with user-defined interval
         listener.join()  # Ensure listener stops properly
 
     if not running:  # Break the loop if Esc was pressed 3 times

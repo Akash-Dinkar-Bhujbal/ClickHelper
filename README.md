@@ -44,7 +44,7 @@ README.md:
 ## How It Works
 
 1. Start the program.
-2. Enter the time interval (in seconds) between clicks when prompted.
+2. Enter the time interval (in seconds) between clicks when prompted. This is the amount of time the program waits between each mouse click.
 3. The program will begin performing left mouse clicks at the specified interval.
 4. To stop the program, press the `Esc` key three times.
 
@@ -98,3 +98,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Disclaimer
 
 This tool is provided "as is" without warranty of any kind. Use it responsibly and ensure it complies with the intended use cases and policies.
+
+
+### Changes & Updates:
+- Added the **"Customizable Time Intervals"** feature where the user enters the time interval.
+- Updated the **"Installation and Usage"** section to include clear instructions for both Python and non-Python users.
+- Adjusted **Repository Structure** and **Future Updates** sections to reflect the next steps and improvements.
+
+This final version should cover everything needed for your GitHub repository. Let me know if you'd like to add anything else!
